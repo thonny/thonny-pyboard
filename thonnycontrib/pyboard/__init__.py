@@ -21,4 +21,4 @@ class PyBoardProxy(MicroPythonProxy):
 
 
 def load_early_plugin():
-    get_workbench().add_backend("PyBoard", PyBoardProxy)
+    get_workbench().add_backend("PyBoard", PyBoardProxy, "MicroPython on PyBoard", "pybo")
