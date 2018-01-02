@@ -1,4 +1,4 @@
-from thonnycontrib.micropython import MicroPythonProxy
+from thonnycontrib.micropython import MicroPythonProxy, MicroPythonConfigPage
 from thonny.globals import get_workbench, get_runner
 import os
 from thonny import THONNY_USER_BASE
@@ -19,6 +19,9 @@ class PyBoardProxy(MicroPythonProxy):
     def select_and_upload_micropython(self):
         webbrowser.open("https://github.com/micropython/micropython/wiki/Pyboard-Firmware-Update")
 
+class PyBoardConfigPage(MicroPythonConfigPage):
+    pass
 
 def load_early_plugin():
-    get_workbench().add_backend("PyBoard", PyBoardProxy, "MicroPython on PyBoard", "pybo")
+    get_workbench().add_backend("PyBoard", PyBoardProxy, 
+                                "MicroPython on PyBoard", PyBoardConfigPage)
