@@ -22,6 +22,5 @@ class PyBoardProxy(MicroPythonProxy):
 class PyBoardConfigPage(MicroPythonConfigPage):
     pass
 
-
 def load_early_plugin():
     get_workbench().add_backend("PyBoard", PyBoardProxy, "MicroPython on PyBoard", PyBoardConfigPage)
