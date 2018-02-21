@@ -16,6 +16,9 @@ class PyBoardProxy(MicroPythonProxy):
             (0xF055, 0x9802), # Pyboard in CDC+MSC mode
         }
 
+    def _get_fs_mount_name(self):
+        return "PYBFLASH"
+        
     def select_and_upload_micropython(self):
         webbrowser.open("https://github.com/micropython/micropython/wiki/Pyboard-Firmware-Update")
 
