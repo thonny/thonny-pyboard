@@ -1,6 +1,5 @@
 from setuptools import setup
 import os.path
-import sys
 
 setupdir = os.path.dirname(__file__)
 
@@ -12,9 +11,15 @@ for line in open(os.path.join(setupdir, 'requirements.txt'), encoding="UTF-8"):
 setup(
       name="thonny-pyboard",
       version="0.1b1",
-      description="PyBoard MicroPython support for Thonny",
-      long_description="""This is a plug-in for Thonny which adds PyBoard MicroPython backend. 
-More info about Thonny: http://thonny.org.""",
+      description="PyBoard MicroPython support for Thonny IDE",
+      long_description="""Plug-in for Thonny IDE which adds PyBoard MicroPython backend. 
+      
+More info: 
+
+* https://bitbucket.org/plas/thonny-pyboard
+* https://bitbucket.org/plas/thonny-micropython
+* http://thonny.org
+""",
       url="https://bitbucket.org/plas/thonny-pyboard/",
       author="Aivar Annamaa",
 	  author_email="aivar.annamaa@gmail.com",
@@ -36,17 +41,18 @@ More info about Thonny: http://thonny.org.""",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3 :: Only",
-        "Programming Language :: Python :: 3.4",
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
         "Topic :: Education",
         "Topic :: Software Development",
         "Topic :: Software Development :: Embedded Systems",
       ],
       keywords="IDE education programming PyBoard MicroPython Thonny",
       platforms=["Windows", "macOS", "Linux"],
-      python_requires=">=3.4",
-	  package_data={'thonnycontrib.pyboard': ['dummy_modules/*',  'res/*']},
+      python_requires=">=3.5",
+      include_package_data=True,
+	  package_data={'thonnycontrib.pyboard': ['api_stubs/*',  'res/*']},
       install_requires=requirements,
       packages=["thonnycontrib.pyboard"],
 )
