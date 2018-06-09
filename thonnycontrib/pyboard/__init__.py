@@ -2,9 +2,6 @@ from thonnycontrib.micropython import MicroPythonProxy, MicroPythonConfigPage,\
     add_micropython_backend
 from thonny import get_workbench, get_runner
 import os
-from thonny import THONNY_USER_BASE
-import subprocess
-from thonny.ui_utils import SubprocessDialog
 import webbrowser
 
 class PyboardProxy(MicroPythonProxy):
