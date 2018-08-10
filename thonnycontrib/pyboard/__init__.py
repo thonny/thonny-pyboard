@@ -30,6 +30,6 @@ def select_and_upload_micropython():
 
 def load_plugin():
     add_micropython_backend("PyBoard", PyboardProxy, "MicroPython on pyboard", PyboardConfigPage)
-    get_workbench().add_command("uploadmicropythonpyboard", "tools", "Instructions for uploading MicroPython to pyboard ...",
+    get_workbench().add_command("uploadmicropythonpyboard", "device", "Instructions for uploading MicroPython to pyboard ...",
                                 select_and_upload_micropython,
-                                group=120)
+                                group=40)
