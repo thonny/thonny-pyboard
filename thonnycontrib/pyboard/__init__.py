@@ -1,4 +1,4 @@
-from thonnycontrib.micropython import MicroPythonProxy, MicroPythonConfigPage,\
+from thonny.plugins.micropython import MicroPythonProxy, MicroPythonConfigPage,\
     add_micropython_backend
 from thonny import get_workbench, get_runner
 import os
@@ -29,7 +29,7 @@ def select_and_upload_micropython():
 
 
 def load_plugin():
-    add_micropython_backend("PyBoard", PyboardProxy, "MicroPython on pyboard", PyboardConfigPage)
-    get_workbench().add_command("uploadmicropythonpyboard", "device", "Instructions for uploading MicroPython to pyboard ...",
+    add_micropython_backend("pyboard", PyboardProxy, "MicroPython on pyboard", PyboardConfigPage)
+    get_workbench().add_command("uploadmicropythonpyboard", "device", "Instructions for installing MicroPython to pyboard ...",
                                 select_and_upload_micropython,
                                 group=40)

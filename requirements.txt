@@ -1,2 +1,1 @@
-thonny>=2.2.0b3
-thonny-micropython>=0.1.0b1
+thonny>=3.0.0b1

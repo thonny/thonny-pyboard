@@ -10,15 +10,15 @@ for line in open(os.path.join(setupdir, 'requirements.txt'), encoding="UTF-8"):
 
 setup(
       name="thonny-pyboard",
-      version="0.1b1",
+      version="0.2b1",
       description="PyBoard MicroPython support for Thonny IDE",
       long_description="""Plug-in for Thonny IDE which adds PyBoard MicroPython backend. 
       
 More info: 
 
 * https://bitbucket.org/plas/thonny-pyboard
-* https://bitbucket.org/plas/thonny-micropython
-* http://thonny.org
+* https://bitbucket.org/plas/thonny/wiki/MicroPython
+* https://thonny.org
 """,
       url="https://bitbucket.org/plas/thonny-pyboard/",
       author="Aivar Annamaa",
