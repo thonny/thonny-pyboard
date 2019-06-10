@@ -14,9 +14,6 @@ class PyboardProxy(MicroPythonProxy):
             (0xF055, 0x9802), # Pyboard in CDC+MSC mode
         }
 
-    def _supports_directories(self):
-        return True
-    
     def _get_fs_mount_name(self):
         return "PYBFLASH"
         
